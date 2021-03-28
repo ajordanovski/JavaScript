@@ -1,0 +1,18 @@
+Да се внесе бројка на роденден и да се провери дали е полнолетена особата?
+
+1. Внесувам прво месец, па ден, па година (пример 01231996)
+
+2. Замената на внесената бројката со формат на вредност разбирлива за датум се прави со: 
+
+    var todayDate = new Date();
+    var stringFormatedDate = НЕШТО.match(/(\d\d)(\d\d)(\d\d\d\d)/); //01 23 1996
+    var date = new Date(stringFormatedDate[3], stringFormatedDate[1] - 1, stringFormatedDate[2]);
+
+3. За превземање на денот во месецот се користи НЕКОИ_СИ_ДАТУМ.getDate(), за месецот НЕКОИ_СИ_ДАТУМ.getMonth() + 1, 
+за годината НЕКОИ_СИ_ДАТУМ.getFullYear()
+
+let todayDateDate = todayDate.getDate();
+let todayDateMonth = todayDate.getMonth() + 1;
+let todayDateFullYear = todayDate.getFullYear();
+
+4. Доколку му/и е роденден испечатете порака "Srekjen rodenden" и во продолжение дали е полнолотен/а.
